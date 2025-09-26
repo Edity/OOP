@@ -3,7 +3,9 @@
 
 int Time(int hour, int min, std::string half){
     if (half == "pm"){
-        hour += 12;
+        if (hour != 12) hour += 12;
     }
-    return hour % 24 * 100 + min;
+    else
+        if (hour == 12) hour = 0;
+    return hour * 100 + min;
 }
