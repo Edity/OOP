@@ -14,7 +14,7 @@ TEST(TimeTest, SmallMin) {
 
 TEST(TimeTest, Midtime) {
     EXPECT_EQ(Time(12, 0, "pm"), 1200);
-    EXPECT_EQ(Time(12, 0, "am"), 0);
+    EXPECT_EQ(Time(12, 0, "am"), 1200);
 }
 
 TEST(TimeTest, Latetime) {
